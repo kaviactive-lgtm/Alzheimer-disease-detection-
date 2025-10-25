@@ -1,0 +1,541 @@
+2025-10-06 14:14:27,167 [INFO] - Logger initialized.
+2025-10-06 14:14:27,187 [INFO] - Environment setup complete. Seed set for reproducibility.
+2025-10-06 14:14:27,187 [INFO] - Loading and preparing data...
+2025-10-06 14:14:27,187 [INFO] - Loaded 10240 training samples.
+2025-10-06 14:14:27,187 [INFO] - Loaded 1279 validation samples.
+2025-10-06 14:14:27,187 [INFO] - Data loading complete. Batches per epoch: 640
+2025-10-06 14:14:27,187 [INFO] - Initializing NeuroOmics-Net model...
+2025-10-06 14:14:27,202 [INFO] - Model Architecture:
+NeuroOmicsNet(
+  (smri_encoder): Sequential(
+    (0): Conv2d(1, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (2): ReLU()
+    (3): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (4): Conv2d(16, 32, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (5): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (6): ReLU()
+    (7): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (8): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1))
+    (9): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (10): ReLU()
+    (11): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (12): AdaptiveAvgPool2d(output_size=1)
+    (13): Flatten(start_dim=1, end_dim=-1)
+    (14): Linear(in_features=64, out_features=256, bias=True)
+  )
+  (classifier): Linear(in_features=256, out_features=4, bias=True)
+)
+2025-10-06 14:14:27,202 [INFO] - Starting model training...
+2025-10-06 14:14:27,268 [INFO] - Using device: cuda
+2025-10-06 14:14:28,160 [INFO] - --- Epoch 1/100 ---
+2025-10-06 14:14:36,811 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:14:42,436 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:14:42,436 [INFO] - Train Loss: 1.2165 | Train Acc: 45.55%
+2025-10-06 14:14:42,436 [INFO] - Val Loss: 1.1174 | Val Acc: 50.59% | Val AUC: 0.5000
+2025-10-06 14:14:42,436 [INFO] - New best model found with AUC: 0.5000
+2025-10-06 14:14:42,459 [INFO] - Saved new best model to checkpoints\best_model.pth.tar
+2025-10-06 14:14:42,459 [INFO] - --- Epoch 2/100 ---
+2025-10-06 14:14:51,095 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:14:56,640 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:14:56,640 [INFO] - Train Loss: 0.8426 | Train Acc: 64.76%
+2025-10-06 14:14:56,640 [INFO] - Val Loss: 1.0051 | Val Acc: 48.71% | Val AUC: 0.5000
+2025-10-06 14:14:56,640 [INFO] - --- Epoch 3/100 ---
+2025-10-06 14:15:05,261 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:15:10,855 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:15:10,855 [INFO] - Train Loss: 0.6608 | Train Acc: 71.26%
+2025-10-06 14:15:10,855 [INFO] - Val Loss: 0.9365 | Val Acc: 52.15% | Val AUC: 0.5000
+2025-10-06 14:15:10,855 [INFO] - --- Epoch 4/100 ---
+2025-10-06 14:15:19,427 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:15:25,027 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:15:25,027 [INFO] - Train Loss: 0.5927 | Train Acc: 74.07%
+2025-10-06 14:15:25,027 [INFO] - Val Loss: 0.8979 | Val Acc: 54.10% | Val AUC: 0.5000
+2025-10-06 14:15:25,027 [INFO] - --- Epoch 5/100 ---
+2025-10-06 14:15:33,641 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:15:39,250 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:15:39,250 [INFO] - Train Loss: 0.5536 | Train Acc: 74.93%
+2025-10-06 14:15:39,250 [INFO] - Val Loss: 0.9783 | Val Acc: 54.57% | Val AUC: 0.5000
+2025-10-06 14:15:39,250 [INFO] - --- Epoch 6/100 ---
+2025-10-06 14:15:47,826 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:15:53,437 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:15:53,437 [INFO] - Train Loss: 0.5217 | Train Acc: 76.49%
+2025-10-06 14:15:53,437 [INFO] - Val Loss: 0.9400 | Val Acc: 56.22% | Val AUC: 0.5000
+2025-10-06 14:15:53,437 [INFO] - --- Epoch 7/100 ---
+2025-10-06 14:16:01,963 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:16:07,585 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:16:07,585 [INFO] - Train Loss: 0.5027 | Train Acc: 77.96%
+2025-10-06 14:16:07,585 [INFO] - Val Loss: 1.0466 | Val Acc: 55.04% | Val AUC: 0.5000
+2025-10-06 14:16:07,585 [INFO] - --- Epoch 8/100 ---
+2025-10-06 14:16:16,173 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:16:21,807 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:16:21,807 [INFO] - Train Loss: 0.4822 | Train Acc: 79.06%
+2025-10-06 14:16:21,807 [INFO] - Val Loss: 2.1007 | Val Acc: 27.37% | Val AUC: 0.5000
+2025-10-06 14:16:21,807 [INFO] - --- Epoch 9/100 ---
+2025-10-06 14:16:30,438 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:16:36,044 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:16:36,044 [INFO] - Train Loss: 0.4593 | Train Acc: 80.37%
+2025-10-06 14:16:36,044 [INFO] - Val Loss: 1.0924 | Val Acc: 52.46% | Val AUC: 0.5000
+2025-10-06 14:16:36,044 [INFO] - --- Epoch 10/100 ---
+2025-10-06 14:16:44,581 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:16:50,210 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:16:50,210 [INFO] - Train Loss: 0.4416 | Train Acc: 81.04%
+2025-10-06 14:16:50,210 [INFO] - Val Loss: 0.9197 | Val Acc: 57.54% | Val AUC: 0.5000
+2025-10-06 14:16:50,210 [INFO] - --- Epoch 11/100 ---
+2025-10-06 14:16:58,750 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:17:04,433 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:17:04,433 [INFO] - Train Loss: 0.4289 | Train Acc: 81.87%
+2025-10-06 14:17:04,433 [INFO] - Val Loss: 0.9021 | Val Acc: 59.66% | Val AUC: 0.5000
+2025-10-06 14:17:04,433 [INFO] - --- Epoch 12/100 ---
+2025-10-06 14:17:13,551 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:17:19,203 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:17:19,203 [INFO] - Train Loss: 0.4091 | Train Acc: 82.77%
+2025-10-06 14:17:19,203 [INFO] - Val Loss: 1.1122 | Val Acc: 53.48% | Val AUC: 0.5000
+2025-10-06 14:17:19,203 [INFO] - --- Epoch 13/100 ---
+2025-10-06 14:17:27,793 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:17:33,427 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:17:33,427 [INFO] - Train Loss: 0.3931 | Train Acc: 82.99%
+2025-10-06 14:17:33,427 [INFO] - Val Loss: 2.0985 | Val Acc: 33.07% | Val AUC: 0.5000
+2025-10-06 14:17:33,427 [INFO] - --- Epoch 14/100 ---
+2025-10-06 14:17:42,120 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:17:47,787 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:17:47,788 [INFO] - Train Loss: 0.3782 | Train Acc: 83.98%
+2025-10-06 14:17:47,788 [INFO] - Val Loss: 1.1201 | Val Acc: 54.65% | Val AUC: 0.5000
+2025-10-06 14:17:47,788 [INFO] - --- Epoch 15/100 ---
+2025-10-06 14:17:56,789 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:18:02,388 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:18:02,388 [INFO] - Train Loss: 0.3617 | Train Acc: 85.09%
+2025-10-06 14:18:02,388 [INFO] - Val Loss: 0.8674 | Val Acc: 61.22% | Val AUC: 0.5000
+2025-10-06 14:18:02,388 [INFO] - --- Epoch 16/100 ---
+2025-10-06 14:18:11,356 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:18:17,000 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:18:17,000 [INFO] - Train Loss: 0.3557 | Train Acc: 85.09%
+2025-10-06 14:18:17,000 [INFO] - Val Loss: 0.8848 | Val Acc: 63.17% | Val AUC: 0.5000
+2025-10-06 14:18:17,001 [INFO] - --- Epoch 17/100 ---
+2025-10-06 14:18:25,579 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:18:31,204 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:18:31,204 [INFO] - Train Loss: 0.3464 | Train Acc: 85.19%
+2025-10-06 14:18:31,205 [INFO] - Val Loss: 1.6954 | Val Acc: 43.47% | Val AUC: 0.5000
+2025-10-06 14:18:31,205 [INFO] - --- Epoch 18/100 ---
+2025-10-06 14:18:39,793 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:18:45,406 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:18:45,406 [INFO] - Train Loss: 0.3290 | Train Acc: 86.29%
+2025-10-06 14:18:45,406 [INFO] - Val Loss: 0.8094 | Val Acc: 62.94% | Val AUC: 0.5000
+2025-10-06 14:18:45,406 [INFO] - --- Epoch 19/100 ---
+2025-10-06 14:18:53,964 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:18:59,569 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:18:59,569 [INFO] - Train Loss: 0.3199 | Train Acc: 87.09%
+2025-10-06 14:18:59,569 [INFO] - Val Loss: 1.0841 | Val Acc: 56.53% | Val AUC: 0.5000
+2025-10-06 14:18:59,569 [INFO] - --- Epoch 20/100 ---
+2025-10-06 14:19:08,176 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:19:13,756 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:19:13,756 [INFO] - Train Loss: 0.3047 | Train Acc: 87.60%
+2025-10-06 14:19:13,756 [INFO] - Val Loss: 1.6195 | Val Acc: 48.63% | Val AUC: 0.5000
+2025-10-06 14:19:13,756 [INFO] - --- Epoch 21/100 ---
+2025-10-06 14:19:22,343 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:19:27,946 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:19:27,946 [INFO] - Train Loss: 0.2922 | Train Acc: 88.16%
+2025-10-06 14:19:27,946 [INFO] - Val Loss: 1.2969 | Val Acc: 54.42% | Val AUC: 0.5000
+2025-10-06 14:19:27,946 [INFO] - --- Epoch 22/100 ---
+2025-10-06 14:19:36,525 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:19:42,154 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:19:42,154 [INFO] - Train Loss: 0.2927 | Train Acc: 88.16%
+2025-10-06 14:19:42,154 [INFO] - Val Loss: 1.2126 | Val Acc: 55.82% | Val AUC: 0.5000
+2025-10-06 14:19:42,154 [INFO] - --- Epoch 23/100 ---
+2025-10-06 14:19:50,777 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:19:56,371 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:19:56,371 [INFO] - Train Loss: 0.2821 | Train Acc: 88.72%
+2025-10-06 14:19:56,386 [INFO] - Val Loss: 1.2388 | Val Acc: 54.10% | Val AUC: 0.5000
+2025-10-06 14:19:56,386 [INFO] - --- Epoch 24/100 ---
+2025-10-06 14:20:04,928 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:20:10,555 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:20:10,555 [INFO] - Train Loss: 0.2686 | Train Acc: 89.39%
+2025-10-06 14:20:10,555 [INFO] - Val Loss: 1.0667 | Val Acc: 58.09% | Val AUC: 0.5000
+2025-10-06 14:20:10,555 [INFO] - --- Epoch 25/100 ---
+2025-10-06 14:20:19,390 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:20:25,089 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:20:25,089 [INFO] - Train Loss: 0.2552 | Train Acc: 89.91%
+2025-10-06 14:20:25,089 [INFO] - Val Loss: 1.1472 | Val Acc: 58.56% | Val AUC: 0.5000
+2025-10-06 14:20:25,089 [INFO] - --- Epoch 26/100 ---
+2025-10-06 14:20:34,112 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:20:39,656 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:20:39,656 [INFO] - Train Loss: 0.2464 | Train Acc: 90.55%
+2025-10-06 14:20:39,656 [INFO] - Val Loss: 1.0540 | Val Acc: 57.15% | Val AUC: 0.5000
+2025-10-06 14:20:39,656 [INFO] - --- Epoch 27/100 ---
+2025-10-06 14:20:48,182 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:20:53,898 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:20:53,898 [INFO] - Train Loss: 0.2445 | Train Acc: 90.45%
+2025-10-06 14:20:53,898 [INFO] - Val Loss: 2.5290 | Val Acc: 51.29% | Val AUC: 0.5000
+2025-10-06 14:20:53,898 [INFO] - --- Epoch 28/100 ---
+2025-10-06 14:21:02,497 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:21:08,150 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:21:08,150 [INFO] - Train Loss: 0.2327 | Train Acc: 90.94%
+2025-10-06 14:21:08,150 [INFO] - Val Loss: 0.8083 | Val Acc: 68.88% | Val AUC: 0.5000
+2025-10-06 14:21:08,150 [INFO] - --- Epoch 29/100 ---
+2025-10-06 14:21:16,681 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:21:22,363 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:21:22,363 [INFO] - Train Loss: 0.2274 | Train Acc: 91.42%
+2025-10-06 14:21:22,363 [INFO] - Val Loss: 1.0204 | Val Acc: 63.02% | Val AUC: 0.5000
+2025-10-06 14:21:22,363 [INFO] - --- Epoch 30/100 ---
+2025-10-06 14:21:30,882 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:21:36,522 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:21:36,522 [INFO] - Train Loss: 0.2124 | Train Acc: 92.12%
+2025-10-06 14:21:36,522 [INFO] - Val Loss: 1.4349 | Val Acc: 48.08% | Val AUC: 0.5000
+2025-10-06 14:21:36,522 [INFO] - --- Epoch 31/100 ---
+2025-10-06 14:21:45,048 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:21:50,709 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:21:50,709 [INFO] - Train Loss: 0.2071 | Train Acc: 92.48%
+2025-10-06 14:21:50,709 [INFO] - Val Loss: 3.7407 | Val Acc: 32.68% | Val AUC: 0.5000
+2025-10-06 14:21:50,709 [INFO] - --- Epoch 32/100 ---
+2025-10-06 14:21:59,397 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:22:05,138 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:22:05,138 [INFO] - Train Loss: 0.1957 | Train Acc: 92.84%
+2025-10-06 14:22:05,139 [INFO] - Val Loss: 1.6698 | Val Acc: 51.21% | Val AUC: 0.5000
+2025-10-06 14:22:05,139 [INFO] - --- Epoch 33/100 ---
+2025-10-06 14:22:13,972 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:22:19,730 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:22:19,731 [INFO] - Train Loss: 0.1890 | Train Acc: 92.96%
+2025-10-06 14:22:19,731 [INFO] - Val Loss: 0.8841 | Val Acc: 67.08% | Val AUC: 0.5000
+2025-10-06 14:22:19,731 [INFO] - --- Epoch 34/100 ---
+2025-10-06 14:22:28,537 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:22:34,141 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:22:34,141 [INFO] - Train Loss: 0.1770 | Train Acc: 93.98%
+2025-10-06 14:22:34,141 [INFO] - Val Loss: 2.4241 | Val Acc: 39.95% | Val AUC: 0.5000
+2025-10-06 14:22:34,141 [INFO] - --- Epoch 35/100 ---
+2025-10-06 14:22:42,695 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:22:48,339 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:22:48,339 [INFO] - Train Loss: 0.1717 | Train Acc: 94.14%
+2025-10-06 14:22:48,339 [INFO] - Val Loss: 1.1643 | Val Acc: 62.31% | Val AUC: 0.5000
+2025-10-06 14:22:48,339 [INFO] - --- Epoch 36/100 ---
+2025-10-06 14:22:57,000 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:23:02,738 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:23:02,738 [INFO] - Train Loss: 0.1640 | Train Acc: 94.30%
+2025-10-06 14:23:02,738 [INFO] - Val Loss: 1.1453 | Val Acc: 59.66% | Val AUC: 0.5000
+2025-10-06 14:23:02,738 [INFO] - --- Epoch 37/100 ---
+2025-10-06 14:23:11,630 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:23:17,452 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:23:17,452 [INFO] - Train Loss: 0.1582 | Train Acc: 94.76%
+2025-10-06 14:23:17,452 [INFO] - Val Loss: 2.7559 | Val Acc: 50.74% | Val AUC: 0.5000
+2025-10-06 14:23:17,452 [INFO] - --- Epoch 38/100 ---
+2025-10-06 14:23:26,350 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:23:32,042 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:23:32,042 [INFO] - Train Loss: 0.1487 | Train Acc: 95.21%
+2025-10-06 14:23:32,042 [INFO] - Val Loss: 1.4356 | Val Acc: 58.17% | Val AUC: 0.5000
+2025-10-06 14:23:32,042 [INFO] - --- Epoch 39/100 ---
+2025-10-06 14:23:40,656 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:23:46,280 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:23:46,280 [INFO] - Train Loss: 0.1383 | Train Acc: 95.78%
+2025-10-06 14:23:46,280 [INFO] - Val Loss: 1.9915 | Val Acc: 46.05% | Val AUC: 0.5000
+2025-10-06 14:23:46,280 [INFO] - --- Epoch 40/100 ---
+2025-10-06 14:23:54,886 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:24:00,504 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:24:00,504 [INFO] - Train Loss: 0.1339 | Train Acc: 95.97%
+2025-10-06 14:24:00,504 [INFO] - Val Loss: 1.6567 | Val Acc: 52.85% | Val AUC: 0.5000
+2025-10-06 14:24:00,504 [INFO] - --- Epoch 41/100 ---
+2025-10-06 14:24:09,049 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:24:14,669 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:24:14,669 [INFO] - Train Loss: 0.1242 | Train Acc: 96.33%
+2025-10-06 14:24:14,669 [INFO] - Val Loss: 0.7017 | Val Acc: 72.32% | Val AUC: 0.5000
+2025-10-06 14:24:14,669 [INFO] - --- Epoch 42/100 ---
+2025-10-06 14:24:23,260 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:24:28,854 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:24:28,854 [INFO] - Train Loss: 0.1241 | Train Acc: 96.24%
+2025-10-06 14:24:28,854 [INFO] - Val Loss: 1.2092 | Val Acc: 59.19% | Val AUC: 0.5000
+2025-10-06 14:24:28,854 [INFO] - --- Epoch 43/100 ---
+2025-10-06 14:24:37,506 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:24:43,216 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:24:43,216 [INFO] - Train Loss: 0.1144 | Train Acc: 96.59%
+2025-10-06 14:24:43,216 [INFO] - Val Loss: 2.3727 | Val Acc: 52.93% | Val AUC: 0.5000
+2025-10-06 14:24:43,216 [INFO] - --- Epoch 44/100 ---
+2025-10-06 14:24:51,839 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:24:57,454 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:24:57,454 [INFO] - Train Loss: 0.1135 | Train Acc: 96.46%
+2025-10-06 14:24:57,454 [INFO] - Val Loss: 1.1785 | Val Acc: 62.08% | Val AUC: 0.5000
+2025-10-06 14:24:57,454 [INFO] - --- Epoch 45/100 ---
+2025-10-06 14:25:06,045 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:25:11,644 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:25:11,644 [INFO] - Train Loss: 0.1027 | Train Acc: 97.14%
+2025-10-06 14:25:11,644 [INFO] - Val Loss: 2.4003 | Val Acc: 58.33% | Val AUC: 0.5000
+2025-10-06 14:25:11,644 [INFO] - --- Epoch 46/100 ---
+2025-10-06 14:25:20,242 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:25:25,878 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:25:25,878 [INFO] - Train Loss: 0.0941 | Train Acc: 97.59%
+2025-10-06 14:25:25,878 [INFO] - Val Loss: 1.1167 | Val Acc: 67.24% | Val AUC: 0.5000
+2025-10-06 14:25:25,878 [INFO] - --- Epoch 47/100 ---
+2025-10-06 14:25:34,460 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:25:40,038 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:25:40,038 [INFO] - Train Loss: 0.0893 | Train Acc: 97.82%
+2025-10-06 14:25:40,038 [INFO] - Val Loss: 1.8847 | Val Acc: 51.84% | Val AUC: 0.5000
+2025-10-06 14:25:40,038 [INFO] - --- Epoch 48/100 ---
+2025-10-06 14:25:48,610 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:25:54,221 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:25:54,221 [INFO] - Train Loss: 0.0924 | Train Acc: 97.56%
+2025-10-06 14:25:54,221 [INFO] - Val Loss: 4.2486 | Val Acc: 34.79% | Val AUC: 0.5000
+2025-10-06 14:25:54,221 [INFO] - --- Epoch 49/100 ---
+2025-10-06 14:26:02,790 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:26:08,455 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:26:08,455 [INFO] - Train Loss: 0.0781 | Train Acc: 98.16%
+2025-10-06 14:26:08,455 [INFO] - Val Loss: 1.5409 | Val Acc: 55.20% | Val AUC: 0.5000
+2025-10-06 14:26:08,455 [INFO] - --- Epoch 50/100 ---
+2025-10-06 14:26:17,011 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:26:22,630 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:26:22,630 [INFO] - Train Loss: 0.0790 | Train Acc: 98.10%
+2025-10-06 14:26:22,630 [INFO] - Val Loss: 0.9930 | Val Acc: 68.49% | Val AUC: 0.5000
+2025-10-06 14:26:22,630 [INFO] - --- Epoch 51/100 ---
+2025-10-06 14:26:31,146 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:26:36,816 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:26:36,816 [INFO] - Train Loss: 0.0716 | Train Acc: 98.39%
+2025-10-06 14:26:36,816 [INFO] - Val Loss: 1.3088 | Val Acc: 62.86% | Val AUC: 0.5000
+2025-10-06 14:26:36,816 [INFO] - --- Epoch 52/100 ---
+2025-10-06 14:26:45,372 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:26:51,001 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:26:51,001 [INFO] - Train Loss: 0.0684 | Train Acc: 98.52%
+2025-10-06 14:26:51,001 [INFO] - Val Loss: 2.6954 | Val Acc: 46.83% | Val AUC: 0.5000
+2025-10-06 14:26:51,001 [INFO] - --- Epoch 53/100 ---
+2025-10-06 14:26:59,688 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:27:05,366 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:27:05,366 [INFO] - Train Loss: 0.0690 | Train Acc: 98.33%
+2025-10-06 14:27:05,366 [INFO] - Val Loss: 1.6645 | Val Acc: 59.03% | Val AUC: 0.5000
+2025-10-06 14:27:05,366 [INFO] - --- Epoch 54/100 ---
+2025-10-06 14:27:14,017 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:27:19,621 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:27:19,621 [INFO] - Train Loss: 0.0638 | Train Acc: 98.43%
+2025-10-06 14:27:19,621 [INFO] - Val Loss: 1.6395 | Val Acc: 59.73% | Val AUC: 0.5000
+2025-10-06 14:27:19,621 [INFO] - --- Epoch 55/100 ---
+2025-10-06 14:27:28,176 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:27:33,789 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:27:33,789 [INFO] - Train Loss: 0.0564 | Train Acc: 98.87%
+2025-10-06 14:27:33,789 [INFO] - Val Loss: 4.0932 | Val Acc: 44.25% | Val AUC: 0.5000
+2025-10-06 14:27:33,789 [INFO] - --- Epoch 56/100 ---
+2025-10-06 14:27:42,392 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:27:48,051 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:27:48,051 [INFO] - Train Loss: 0.0590 | Train Acc: 98.59%
+2025-10-06 14:27:48,051 [INFO] - Val Loss: 0.9384 | Val Acc: 73.03% | Val AUC: 0.5000
+2025-10-06 14:27:48,051 [INFO] - --- Epoch 57/100 ---
+2025-10-06 14:27:56,719 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:28:02,410 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:28:02,410 [INFO] - Train Loss: 0.0535 | Train Acc: 98.77%
+2025-10-06 14:28:02,410 [INFO] - Val Loss: 1.2623 | Val Acc: 63.57% | Val AUC: 0.5000
+2025-10-06 14:28:02,410 [INFO] - --- Epoch 58/100 ---
+2025-10-06 14:28:11,017 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:28:16,795 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:28:16,795 [INFO] - Train Loss: 0.0468 | Train Acc: 99.26%
+2025-10-06 14:28:16,795 [INFO] - Val Loss: 1.9218 | Val Acc: 58.80% | Val AUC: 0.5000
+2025-10-06 14:28:16,795 [INFO] - --- Epoch 59/100 ---
+2025-10-06 14:28:25,616 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:28:31,405 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:28:31,405 [INFO] - Train Loss: 0.0450 | Train Acc: 99.21%
+2025-10-06 14:28:31,405 [INFO] - Val Loss: 0.7766 | Val Acc: 74.82% | Val AUC: 0.5000
+2025-10-06 14:28:31,405 [INFO] - --- Epoch 60/100 ---
+2025-10-06 14:28:40,189 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:28:45,908 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:28:45,908 [INFO] - Train Loss: 0.0442 | Train Acc: 99.14%
+2025-10-06 14:28:45,908 [INFO] - Val Loss: 1.3036 | Val Acc: 66.46% | Val AUC: 0.5000
+2025-10-06 14:28:45,908 [INFO] - --- Epoch 61/100 ---
+2025-10-06 14:28:55,434 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:29:01,584 [INFO] - Train Loss: 0.0413 | Train Acc: 99.31%
+2025-10-06 14:29:01,584 [INFO] - Val Loss: 6.6695 | Val Acc: 50.12% | Val AUC: 0.7448
+2025-10-06 14:29:01,584 [INFO] - New best model found with AUC: 0.7448
+2025-10-06 14:29:01,599 [INFO] - Saved new best model to checkpoints\best_model.pth.tar
+2025-10-06 14:29:01,599 [INFO] - --- Epoch 62/100 ---
+2025-10-06 14:29:11,322 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:29:17,493 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:29:17,493 [INFO] - Train Loss: 0.0382 | Train Acc: 99.28%
+2025-10-06 14:29:17,493 [INFO] - Val Loss: 1.3896 | Val Acc: 61.92% | Val AUC: 0.5000
+2025-10-06 14:29:17,493 [INFO] - --- Epoch 63/100 ---
+2025-10-06 14:29:26,665 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:29:32,333 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:29:32,333 [INFO] - Train Loss: 0.0392 | Train Acc: 99.40%
+2025-10-06 14:29:32,333 [INFO] - Val Loss: 1.6592 | Val Acc: 56.29% | Val AUC: 0.5000
+2025-10-06 14:29:32,333 [INFO] - --- Epoch 64/100 ---
+2025-10-06 14:29:40,942 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:29:46,582 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:29:46,582 [INFO] - Train Loss: 0.0376 | Train Acc: 99.29%
+2025-10-06 14:29:46,582 [INFO] - Val Loss: 1.0569 | Val Acc: 76.39% | Val AUC: 0.5000
+2025-10-06 14:29:46,582 [INFO] - --- Epoch 65/100 ---
+2025-10-06 14:29:55,144 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:30:00,801 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:30:00,801 [INFO] - Train Loss: 0.0368 | Train Acc: 99.19%
+2025-10-06 14:30:00,801 [INFO] - Val Loss: 1.7933 | Val Acc: 56.06% | Val AUC: 0.5000
+2025-10-06 14:30:00,801 [INFO] - --- Epoch 66/100 ---
+2025-10-06 14:30:09,434 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:30:15,178 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:30:15,178 [INFO] - Train Loss: 0.0306 | Train Acc: 99.54%
+2025-10-06 14:30:15,178 [INFO] - Val Loss: 7.0206 | Val Acc: 30.02% | Val AUC: 0.5000
+2025-10-06 14:30:15,178 [INFO] - --- Epoch 67/100 ---
+2025-10-06 14:30:24,019 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:30:29,740 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:30:29,740 [INFO] - Train Loss: 0.0309 | Train Acc: 99.52%
+2025-10-06 14:30:29,740 [INFO] - Val Loss: 1.7011 | Val Acc: 60.20% | Val AUC: 0.5000
+2025-10-06 14:30:29,740 [INFO] - --- Epoch 68/100 ---
+2025-10-06 14:30:38,504 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:30:44,100 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:30:44,100 [INFO] - Train Loss: 0.0336 | Train Acc: 99.34%
+2025-10-06 14:30:44,100 [INFO] - Val Loss: 1.2819 | Val Acc: 65.05% | Val AUC: 0.5000
+2025-10-06 14:30:44,100 [INFO] - --- Epoch 69/100 ---
+2025-10-06 14:30:52,741 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:30:58,372 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:30:58,372 [INFO] - Train Loss: 0.0257 | Train Acc: 99.71%
+2025-10-06 14:30:58,372 [INFO] - Val Loss: 0.9070 | Val Acc: 75.22% | Val AUC: 0.5000
+2025-10-06 14:30:58,372 [INFO] - --- Epoch 70/100 ---
+2025-10-06 14:31:06,973 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:31:12,562 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:31:12,562 [INFO] - Train Loss: 0.0242 | Train Acc: 99.63%
+2025-10-06 14:31:12,562 [INFO] - Val Loss: 11.4699 | Val Acc: 17.51% | Val AUC: 0.5000
+2025-10-06 14:31:12,562 [INFO] - --- Epoch 71/100 ---
+2025-10-06 14:31:21,111 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:31:26,718 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:31:26,718 [INFO] - Train Loss: 0.0280 | Train Acc: 99.50%
+2025-10-06 14:31:26,718 [INFO] - Val Loss: 2.8983 | Val Acc: 47.07% | Val AUC: 0.5000
+2025-10-06 14:31:26,718 [INFO] - --- Epoch 72/100 ---
+2025-10-06 14:31:35,393 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:31:41,084 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:31:41,084 [INFO] - Train Loss: 0.0264 | Train Acc: 99.51%
+2025-10-06 14:31:41,084 [INFO] - Val Loss: 7.8011 | Val Acc: 36.43% | Val AUC: 0.5000
+2025-10-06 14:31:41,084 [INFO] - --- Epoch 73/100 ---
+2025-10-06 14:31:49,757 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:31:55,512 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:31:55,512 [INFO] - Train Loss: 0.0301 | Train Acc: 99.40%
+2025-10-06 14:31:55,512 [INFO] - Val Loss: 1.4627 | Val Acc: 62.47% | Val AUC: 0.5000
+2025-10-06 14:31:55,512 [INFO] - --- Epoch 74/100 ---
+2025-10-06 14:32:04,389 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:32:10,096 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:32:10,096 [INFO] - Train Loss: 0.0260 | Train Acc: 99.52%
+2025-10-06 14:32:10,096 [INFO] - Val Loss: 1.0147 | Val Acc: 78.58% | Val AUC: 0.5000
+2025-10-06 14:32:10,096 [INFO] - --- Epoch 75/100 ---
+2025-10-06 14:32:18,715 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:32:24,348 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:32:24,348 [INFO] - Train Loss: 0.0326 | Train Acc: 99.36%
+2025-10-06 14:32:24,348 [INFO] - Val Loss: 1.6089 | Val Acc: 62.24% | Val AUC: 0.5000
+2025-10-06 14:32:24,348 [INFO] - --- Epoch 76/100 ---
+2025-10-06 14:32:33,508 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:32:39,315 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:32:39,315 [INFO] - Train Loss: 0.0191 | Train Acc: 99.75%
+2025-10-06 14:32:39,315 [INFO] - Val Loss: 2.9909 | Val Acc: 51.92% | Val AUC: 0.5000
+2025-10-06 14:32:39,315 [INFO] - --- Epoch 77/100 ---
+2025-10-06 14:32:48,191 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:32:53,953 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:32:53,953 [INFO] - Train Loss: 0.0204 | Train Acc: 99.73%
+2025-10-06 14:32:53,953 [INFO] - Val Loss: 1.3074 | Val Acc: 73.65% | Val AUC: 0.5000
+2025-10-06 14:32:53,954 [INFO] - --- Epoch 78/100 ---
+2025-10-06 14:33:02,904 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:33:08,889 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:33:08,889 [INFO] - Train Loss: 0.0247 | Train Acc: 99.48%
+2025-10-06 14:33:08,890 [INFO] - Val Loss: 1.0134 | Val Acc: 73.73% | Val AUC: 0.5000
+2025-10-06 14:33:08,890 [INFO] - --- Epoch 79/100 ---
+2025-10-06 14:33:18,182 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:33:23,899 [INFO] - Train Loss: 0.0129 | Train Acc: 99.89%
+2025-10-06 14:33:23,899 [INFO] - Val Loss: 3.1872 | Val Acc: 66.85% | Val AUC: 0.8553
+2025-10-06 14:33:23,899 [INFO] - New best model found with AUC: 0.8553
+2025-10-06 14:33:23,915 [INFO] - Saved new best model to checkpoints\best_model.pth.tar
+2025-10-06 14:33:23,915 [INFO] - --- Epoch 80/100 ---
+2025-10-06 14:33:33,105 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:33:38,949 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:33:38,950 [INFO] - Train Loss: 0.0278 | Train Acc: 99.34%
+2025-10-06 14:33:38,950 [INFO] - Val Loss: 1.7444 | Val Acc: 61.61% | Val AUC: 0.5000
+2025-10-06 14:33:38,950 [INFO] - --- Epoch 81/100 ---
+2025-10-06 14:33:48,330 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:33:54,065 [INFO] - Train Loss: 0.0138 | Train Acc: 99.88%
+2025-10-06 14:33:54,065 [INFO] - Val Loss: 12.1575 | Val Acc: 50.12% | Val AUC: 0.6428
+2025-10-06 14:33:54,065 [INFO] - --- Epoch 82/100 ---
+2025-10-06 14:34:03,395 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:34:09,312 [INFO] - Train Loss: 0.0227 | Train Acc: 99.56%
+2025-10-06 14:34:09,312 [INFO] - Val Loss: 9.2193 | Val Acc: 50.04% | Val AUC: 0.7210
+2025-10-06 14:34:09,312 [INFO] - --- Epoch 83/100 ---
+2025-10-06 14:34:18,466 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:34:24,570 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:34:24,570 [INFO] - Train Loss: 0.0207 | Train Acc: 99.64%
+2025-10-06 14:34:24,570 [INFO] - Val Loss: 1.5587 | Val Acc: 64.66% | Val AUC: 0.5000
+2025-10-06 14:34:24,570 [INFO] - --- Epoch 84/100 ---
+2025-10-06 14:34:33,206 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:34:38,841 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:34:38,841 [INFO] - Train Loss: 0.0208 | Train Acc: 99.61%
+2025-10-06 14:34:38,841 [INFO] - Val Loss: 0.8689 | Val Acc: 77.25% | Val AUC: 0.5000
+2025-10-06 14:34:38,841 [INFO] - --- Epoch 85/100 ---
+2025-10-06 14:34:47,461 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:34:53,081 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:34:53,081 [INFO] - Train Loss: 0.0128 | Train Acc: 99.90%
+2025-10-06 14:34:53,081 [INFO] - Val Loss: 1.8232 | Val Acc: 57.86% | Val AUC: 0.5000
+2025-10-06 14:34:53,081 [INFO] - --- Epoch 86/100 ---
+2025-10-06 14:35:01,722 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:35:07,395 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:35:07,395 [INFO] - Train Loss: 0.0128 | Train Acc: 99.86%
+2025-10-06 14:35:07,395 [INFO] - Val Loss: 2.6360 | Val Acc: 56.29% | Val AUC: 0.5000
+2025-10-06 14:35:07,395 [INFO] - --- Epoch 87/100 ---
+2025-10-06 14:35:15,988 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:35:21,664 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:35:21,664 [INFO] - Train Loss: 0.0154 | Train Acc: 99.70%
+2025-10-06 14:35:21,664 [INFO] - Val Loss: 6.7402 | Val Acc: 36.90% | Val AUC: 0.5000
+2025-10-06 14:35:21,664 [INFO] - --- Epoch 88/100 ---
+2025-10-06 14:35:30,630 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:35:36,484 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:35:36,484 [INFO] - Train Loss: 0.0137 | Train Acc: 99.79%
+2025-10-06 14:35:36,484 [INFO] - Val Loss: 6.6620 | Val Acc: 32.45% | Val AUC: 0.5000
+2025-10-06 14:35:36,484 [INFO] - --- Epoch 89/100 ---
+2025-10-06 14:35:44,946 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:35:50,646 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:35:50,646 [INFO] - Train Loss: 0.0283 | Train Acc: 99.32%
+2025-10-06 14:35:50,646 [INFO] - Val Loss: 1.5848 | Val Acc: 65.52% | Val AUC: 0.5000
+2025-10-06 14:35:50,646 [INFO] - --- Epoch 90/100 ---
+2025-10-06 14:35:59,275 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:36:05,217 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:36:05,218 [INFO] - Train Loss: 0.0094 | Train Acc: 99.93%
+2025-10-06 14:36:05,218 [INFO] - Val Loss: 0.7233 | Val Acc: 81.86% | Val AUC: 0.5000
+2025-10-06 14:36:05,218 [INFO] - --- Epoch 91/100 ---
+2025-10-06 14:36:15,321 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:36:21,207 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:36:21,207 [INFO] - Train Loss: 0.0076 | Train Acc: 99.97%
+2025-10-06 14:36:21,207 [INFO] - Val Loss: 3.4145 | Val Acc: 39.87% | Val AUC: 0.5000
+2025-10-06 14:36:21,207 [INFO] - --- Epoch 92/100 ---
+2025-10-06 14:36:30,362 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:36:36,372 [INFO] - Train Loss: 0.0138 | Train Acc: 99.74%
+2025-10-06 14:36:36,372 [INFO] - Val Loss: 20.0970 | Val Acc: 35.89% | Val AUC: 0.6531
+2025-10-06 14:36:36,372 [INFO] - --- Epoch 93/100 ---
+2025-10-06 14:36:45,312 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:36:50,827 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:36:50,827 [INFO] - Train Loss: 0.0264 | Train Acc: 99.38%
+2025-10-06 14:36:50,827 [INFO] - Val Loss: 1.4873 | Val Acc: 74.04% | Val AUC: 0.5000
+2025-10-06 14:36:50,827 [INFO] - --- Epoch 94/100 ---
+2025-10-06 14:36:59,257 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:37:04,791 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:37:04,792 [INFO] - Train Loss: 0.0090 | Train Acc: 99.90%
+2025-10-06 14:37:04,792 [INFO] - Val Loss: 1.3531 | Val Acc: 74.12% | Val AUC: 0.5000
+2025-10-06 14:37:04,792 [INFO] - --- Epoch 95/100 ---
+2025-10-06 14:37:13,201 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:37:18,840 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:37:18,840 [INFO] - Train Loss: 0.0117 | Train Acc: 99.83%
+2025-10-06 14:37:18,840 [INFO] - Val Loss: 1.2744 | Val Acc: 77.48% | Val AUC: 0.5000
+2025-10-06 14:37:18,840 [INFO] - --- Epoch 96/100 ---
+2025-10-06 14:37:27,480 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:37:33,000 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:37:33,000 [INFO] - Train Loss: 0.0160 | Train Acc: 99.70%
+2025-10-06 14:37:33,000 [INFO] - Val Loss: 0.9039 | Val Acc: 73.89% | Val AUC: 0.5000
+2025-10-06 14:37:33,000 [INFO] - --- Epoch 97/100 ---
+2025-10-06 14:37:41,425 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:37:46,949 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:37:46,949 [INFO] - Train Loss: 0.0062 | Train Acc: 99.99%
+2025-10-06 14:37:46,949 [INFO] - Val Loss: 1.1485 | Val Acc: 76.86% | Val AUC: 0.5000
+2025-10-06 14:37:46,949 [INFO] - --- Epoch 98/100 ---
+2025-10-06 14:37:55,360 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:38:00,802 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:38:00,802 [INFO] - Train Loss: 0.0228 | Train Acc: 99.50%
+2025-10-06 14:38:00,802 [INFO] - Val Loss: 2.6578 | Val Acc: 68.10% | Val AUC: 0.5000
+2025-10-06 14:38:00,802 [INFO] - --- Epoch 99/100 ---
+2025-10-06 14:38:09,409 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:38:15,001 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:38:15,001 [INFO] - Train Loss: 0.0119 | Train Acc: 99.84%
+2025-10-06 14:38:15,001 [INFO] - Val Loss: 4.2966 | Val Acc: 36.75% | Val AUC: 0.5000
+2025-10-06 14:38:15,001 [INFO] - --- Epoch 100/100 ---
+2025-10-06 14:38:23,714 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:38:29,193 [WARNING] - AUC calculation failed (likely due to a single class in a batch). Defaulting to 0.5.
+2025-10-06 14:38:29,193 [INFO] - Train Loss: 0.0051 | Train Acc: 99.97%
+2025-10-06 14:38:29,193 [INFO] - Val Loss: 0.8307 | Val Acc: 81.63% | Val AUC: 0.5000
+2025-10-06 14:38:29,193 [INFO] - Training complete.
+2025-10-06 14:38:29,792 [INFO] - Saved training history plot to plots/training_curves.png
+2025-10-06 14:38:29,792 [INFO] - Model training finished.
+2025-10-06 14:38:29,792 [INFO] - --- Starting Post-Training Interpretation ---
+2025-10-06 14:38:29,808 [INFO] - Loaded checkpoint from checkpoints/best_model.pth.tar
+2025-10-06 14:38:29,808 [INFO] - Loaded best model from 'checkpoints/best_model.pth.tar' for interpretation.
+2025-10-06 14:38:34,978 [INFO] - Generating sMRI saliency map...
+2025-10-06 14:38:35,420 [INFO] - sMRI saliency map saved. Shape: (96, 96)
+2025-10-06 14:38:35,420 [INFO] - Interpretation complete. Results saved in 'interpretability/'.
+2025-10-06 14:38:35,420 [INFO] - --- Pipeline Finished ---

@@ -1,0 +1,54 @@
+# ===================================================================
+#                      NeuroOmics-Net Dependencies
+# ===================================================================
+#
+# INSTRUCTIONS FOR INSTALLATION:
+#
+# 1. DO NOT run "pip install -r requirements.txt" immediately.
+#    You must install PyTorch manually first using the special command.
+#
+# 2. Go to https://pytorch.org/get-started/previous-versions/
+#    and find the correct command for PyTorch 2.1.0 that matches your
+#    system (CPU or a specific CUDA version for your NVIDIA GPU).
+#    Run that command.
+#
+# 3. After PyTorch is installed, you can install the rest of the
+#    packages by running:
+#    pip install -r requirements.txt
+#
+# ===================================================================
+
+# --- Core Deep Learning Framework (INSTALL MANUALLY) ---
+# The following lines are commented out on purpose.
+# See instructions above.
+# torch==2.1.0
+# torchvision==0.16.0
+
+# --- Data Handling and Scientific Computing ---
+numpy==1.26.0
+pandas==2.1.1
+Pillow==10.1.0  # For processing 2D sMRI images
+
+# --- Model Interpretability ---
+captum==0.6.0
+
+# --- Performance Metrics and Machine Learning Utilities ---
+scikit-learn==1.3.1
+
+# --- Data Visualization ---
+matplotlib==3.8.0
+seaborn==0.13.0
+
+# --- Configuration and Progress Bars ---
+PyYAML==6.0.1
+tqdm==4.66.1
+
+# --- Domain-Specific Libraries for Medical Data ---
+# For 3D sMRI data (often in .nii or .nii.gz format)
+nibabel==5.1.0
+# For EEG data processing (a common and powerful library)
+mne==1.5.1
+
+# --- Optional Libraries ---
+# For a full-fledged Graph Neural Network in DPGL
+# torch-geometric==2.4.0
